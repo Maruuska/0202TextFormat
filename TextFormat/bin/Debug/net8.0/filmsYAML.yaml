@@ -1,0 +1,40 @@
+- id: 1
+  name: Звездные войны
+  genre: Фантастика
+  year: 1980
+  rating: 8.7
+- id: 2
+  name: Побег из Шоушенка
+  genre: Драма
+  year: 1994
+  rating: 9.3
+- id: 3
+  name: Титаник
+  genre: Драма
+  year: 1997
+  rating: 7.8
+- id: 4
+  name: Храброе сердце
+  genre: Исторический
+  year: 1995
+  rating: 8.3
+- id: 5
+  name: Леон
+  genre: Боевик
+  year: 1994
+  rating: 8.5
+- id: 6
+  name: Матрица
+  genre: Фантастика
+  year: 1999
+  rating: 8.7
+- id: 7
+  name: Интерстеллар
+  genre: Фантастика
+  year: 2014
+  rating: 8.6
+- id: 8
+  name: Гладиатор
+  genre: Исторический
+  year: 2000
+  rating: 8.5

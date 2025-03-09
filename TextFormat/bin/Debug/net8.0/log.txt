@@ -1,0 +1,39 @@
+метод WriteCsv ошибка: No properties are mapped for type 'TextFormat.ModelFilm'.
+IWriter state:
+   Row: 2
+   Index: 0
+   HeaderRecord:
+2
+
+метод WriteCsv ошибка: No properties are mapped for type 'TextFormat.ModelFilm'.
+IWriter state:
+   Row: 2
+   Index: 0
+   HeaderRecord:
+2
+
+метод WriteCsv ошибка: No properties are mapped for type 'TextFormat.ModelFilm'.
+IWriter state:
+   Row: 2
+   Index: 0
+   HeaderRecord:
+2
+
+метод WriteCsv ошибка: No properties are mapped for type 'TextFormat.ModelFilm'.
+IWriter state:
+   Row: 2
+   Index: 0
+   HeaderRecord:
+2
+
+метод ReadCsv ошибка: Could not find file 'C:\Users\Юзер\Desktop\TextFormat\TextFormat\bin\Debug\net8.0\filmsCSV.csv'.
+файл не найден
+метод ReadCsv ошибка: файл не найден
+неверный формат файла
+метод WriteCsv ошибка: файл не найден
+метод WriteCsv ошибка: файл не найден
+метод WriteXml ошибка: TextFormat.ModelFilm cannot be serialized because it does not have a parameterless constructor.
+метод ReadXml ошибка: файл не найден
+метод ReadXml ошибка: файл не найден
+метод ReadXml ошибка: Unable to cast object of type 'System.Collections.Generic.List`1[System.Object]' to type 'System.Collections.Generic.List`1[TextFormat.ModelFilm]'.
+метод ReadYaml ошибка: Unable to cast object of type 'System.Collections.Generic.List`1[System.Object]' to type 'System.Collections.Generic.List`1[TextFormat.ModelFilm]'.
