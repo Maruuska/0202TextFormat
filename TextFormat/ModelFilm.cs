@@ -1,13 +1,7 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
-
-
+﻿
 namespace TextFormat
 {
-    //класс ModelFilm для управление фильмами: Считывание и обработка данных о фильмах (идентификатор, название, жанр, год выпуска, рейтинг)
+    //класс ModelFilm содержит данные о фильме (идентификатор, название, жанр, год выпуска, рейтинг)
     public class ModelFilm
     {
         public int id { get; set; }  //идентификатор фильма
@@ -25,14 +19,14 @@ namespace TextFormat
             this.year = year;
             this.rating = rating;
         }
-        //для записи в .xml
+        //конструктор для записи в .xml
         public ModelFilm() { }
 
         //переопределение функции ToString 
         //метод, который будет выводить данные на экран в удобочитаемом формате
         public override string ToString()
         {
-            return $"id: {this.id} name: {this.name} genre: {this.genre} year: {this.year} rating: {this.rating}";
+            return $"id: {this.id} название: {this.name} жанр: {this.genre} год выпуска: {this.year} рейтинг: {this.rating}";
         }
     }
 }

@@ -36,3 +36,4 @@ C:\Users\Юзер\Desktop\TextFormat\TextFormat\obj\Debug\net8.0\refint\TextForm
 C:\Users\Юзер\Desktop\TextFormat\TextFormat\obj\Debug\net8.0\TextFormat.pdb
 C:\Users\Юзер\Desktop\TextFormat\TextFormat\obj\Debug\net8.0\TextFormat.genruntimeconfig.cache
 C:\Users\Юзер\Desktop\TextFormat\TextFormat\obj\Debug\net8.0\ref\TextFormat.dll
+C:\Users\Юзер\Desktop\TextFormat\TextFormat\obj\Debug\net8.0\TextFormat.sourcelink.json
