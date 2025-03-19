@@ -2,14 +2,12 @@
 using System.Text.Json;
 using System.Globalization;
 using System.Diagnostics;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Xml.Serialization;
 using YamlDotNet.Serialization;
 
-//для управление фильмами: Считывание и обработка
-
 namespace TextFormat
 {
+    // класс WorkingWithFiles содержит методы работы с файлами
     public class WorkingWithFiles
     {
         //обобщенный метод для чтения данных из файлов
@@ -29,9 +27,11 @@ namespace TextFormat
                 case ".yaml":
                     return ReadYaml<ModelFilm>(pathFile);  //чтение данных из .yaml
                 default:
-                    Trace.WriteLine("неверный формат файла");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("неверный формат файла");    //обработка ошибок формата
+                    Console.ResetColor();
+                    Trace.WriteLine("неверный формат файла");    //логирование ошибки
                     Trace.Flush();
-                    //throw new Exception("неверный формат файла");   //Обработка ошибок формата
                     return new List<ModelFilm>();  //в случае ошибки возврат пустого листа
             }
         }
@@ -56,13 +56,17 @@ namespace TextFormat
                     WriteYaml(listFilms, pathFile); //запись данных в .yaml
                     break;
                 default:
-                    Trace.WriteLine("неверный формат файла");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("неверный формат файла");   //обработка ошибок формата
+                    Console.ResetColor();
+                    Trace.WriteLine("неверный формат файла");  //логирование ошибки
                     Trace.Flush();
-                    throw new Exception("неверный формат файла");   //Обработка ошибок формата
+                    break;
             }
         }
 
         //метод, реализующий логику записи данных в файл .csv
+        //принимает лист фильмов типа List<ModelFilm> и строковый путь к файлу
         private static void WriteCsv<ModelFilm>(List<ModelFilm> listFilms, string pathFile)
         {
             Trace.Listeners.Add(new TextWriterTraceListener("log.txt"));    //логирование ошибок
@@ -72,15 +76,19 @@ namespace TextFormat
                 using StreamWriter writer = new StreamWriter(pathFile);     //StreamWriter предназначен для вывода символов в определенной кодировке в файл
                 using CsvWriter csv = new CsvWriter(writer, CultureInfo.CurrentCulture);  //объект класса, который записывает данные в виде набора данных с разделителями
                 csv.WriteRecords(listFilms);   //запись в файл всего листа сразу
+                Console.WriteLine($"запись в файл {pathFile} прошла успешно");
             }
             catch (Exception ex)
             {
+                Console.WriteLine("метод WriteCsv ошибка записи данных");
                 Trace.WriteLine($"метод WriteCsv ошибка: {ex.Message}");
                 Trace.Flush();
             }
         }
 
         //метод, реализующий логику чтения данных из файла .csv
+        //принимает строковый путь к файлу
+        //возвращает лист фильмов типа List<ModelFilm>
         private static List<ModelFilm> ReadCsv<ModelFilm>(string pathFile)
         {
             Trace.Listeners.Add(new TextWriterTraceListener("log.txt"));   //логирование ошибок
@@ -96,9 +104,11 @@ namespace TextFormat
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("файл не найден");
+                    Console.ResetColor();
                     Trace.WriteLine("метод ReadCsv ошибка: файл не найден");
                     Trace.Flush();
-                    //throw new Exception("файл не найден");
                     return new List<ModelFilm>();  //в случае ошибки возврат пустого листа
                 }
             }
@@ -113,6 +123,7 @@ namespace TextFormat
 
 
         //метод, реализующий логику записи данных в файл .json
+        //принимает лист фильмов типа List<ModelFilm> и строковый путь к файлу
         private static void WriteJson<ModelFilm>(List<ModelFilm> listFilms, string pathFile)
         {
             Trace.Listeners.Add(new TextWriterTraceListener("log.txt"));    //логирование ошибок
@@ -120,15 +131,19 @@ namespace TextFormat
             {
                 string json = JsonSerializer.Serialize(listFilms);  //преобразования листа listFilms в строку JSON
                 File.WriteAllText(pathFile, json);  // запись строки json в файл
+                Console.WriteLine($"запись в файл {pathFile} прошла успешно");
             }
             catch (Exception ex)
             {
+                Console.WriteLine("метод WriteJson ошибка записи данных");
                 Trace.WriteLine($"метод WriteJson ошибка: {ex.Message}");
                 Trace.Flush();
             }
         }
 
         //метод, реализующий логику чтения данных из файла .json
+        //принимает строковый путь к файлу
+        //возвращает лист фильмов типа List<ModelFilm>
         private static List<ModelFilm> ReadJson<ModelFilm>(string pathFile)
         {
             Trace.Listeners.Add(new TextWriterTraceListener("log.txt"));   //логирование ошибок
@@ -142,9 +157,12 @@ namespace TextFormat
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("файл не найден");
+                    Console.ResetColor();
                     Trace.WriteLine("метод ReadJson ошибка: файл не найден");
                     Trace.Flush();
-                    throw new Exception("файл не найден");
+                    return new List<ModelFilm>();  //в случае ошибки возврат пустого листа
                 }
             }
             catch (Exception ex)
@@ -158,6 +176,7 @@ namespace TextFormat
 
 
         //метод, реализующий логику записи данных в файл .xml
+        //принимает лист фильмов типа List<ModelFilm> и строковый путь к файлу
         private static void WriteXml<ModelFilm>(List<ModelFilm> listFilms, string pathFile)
         {
             Trace.Listeners.Add(new TextWriterTraceListener("log.txt"));    //логирование ошибок
@@ -166,15 +185,19 @@ namespace TextFormat
                 XmlSerializer serializer = new XmlSerializer(typeof(List<ModelFilm>));  // передаем в конструктор тип List<ModelFilm>
                 using FileStream stream = new FileStream(pathFile, FileMode.Create);  //поток для работы с файлом
                 serializer.Serialize(stream, listFilms);  //запись в файл
+                Console.WriteLine($"запись в файл {pathFile} прошла успешно");
             }
             catch (Exception ex)
             {
+                Console.WriteLine("метод WriteXml ошибка записи данных");
                 Trace.WriteLine($"метод WriteXml ошибка: {ex.Message}");
                 Trace.Flush();
             }
         }
 
         //метод, реализующий логику чтения данных из файла .xml
+        //принимает строковый путь к файлу
+        //возвращает лист фильмов типа List<ModelFilm>
         private static List<ModelFilm> ReadXml<ModelFilm>(string pathFile)
         {
             Trace.Listeners.Add(new TextWriterTraceListener("log.txt"));   //логирование ошибок
@@ -189,9 +212,12 @@ namespace TextFormat
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("файл не найден");
+                    Console.ResetColor();
                     Trace.WriteLine("метод ReadXml ошибка: файл не найден");
                     Trace.Flush();
-                    throw new Exception("файл не найден");
+                    return new List<ModelFilm>();  //в случае ошибки возврат пустого листа
                 }
             }
             catch (Exception ex)
@@ -205,6 +231,7 @@ namespace TextFormat
 
 
         //метод, реализующий логику записи данных в файл .yaml
+        //принимает лист фильмов типа List<ModelFilm> и строковый путь к файлу
         private static void WriteYaml<ModelFilm>(List<ModelFilm> listFilms, string pathFile)
         {
             Trace.Listeners.Add(new TextWriterTraceListener("log.txt"));    //логирование ошибок
@@ -213,15 +240,19 @@ namespace TextFormat
                 var serializer = new SerializerBuilder().Build();
                 string yaml = serializer.Serialize(listFilms);   //данные сериализуются в строку YAML
                 System.IO.File.WriteAllText(pathFile, yaml);  //строка записывается в файл
+                Console.WriteLine($"запись в файл {pathFile} прошла успешно");
             }
             catch (Exception ex)
             {
+                Console.WriteLine("метод WriteYaml ошибка записи данных");
                 Trace.WriteLine($"метод WriteYaml ошибка: {ex.Message}");
                 Trace.Flush();
             }
         }
 
         //метод, реализующий логику чтения данных из файла .yaml
+        //принимает строковый путь к файлу
+        //возвращает лист фильмов типа List<ModelFilm>
         private static List<ModelFilm> ReadYaml<ModelFilm>(string pathFile)
         {
             Trace.Listeners.Add(new TextWriterTraceListener("log.txt"));   //логирование ошибок
@@ -236,9 +267,12 @@ namespace TextFormat
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("файл не найден");
+                    Console.ResetColor();
                     Trace.WriteLine("метод ReadYaml ошибка: файл не найден");
                     Trace.Flush();
-                    throw new Exception("файл не найден");
+                    return new List<ModelFilm>();  //в случае ошибки возврат пустого листа
                 }
             }
             catch (Exception ex)

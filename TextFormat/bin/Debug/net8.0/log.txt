@@ -37,3 +37,13 @@ IWriter state:
 метод ReadXml ошибка: файл не найден
 метод ReadXml ошибка: Unable to cast object of type 'System.Collections.Generic.List`1[System.Object]' to type 'System.Collections.Generic.List`1[TextFormat.ModelFilm]'.
 метод ReadYaml ошибка: Unable to cast object of type 'System.Collections.Generic.List`1[System.Object]' to type 'System.Collections.Generic.List`1[TextFormat.ModelFilm]'.
+метод ReadCsv ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TextFormat\bin\Debug\net8.0\file.csv' because it is being used by another process.
+метод ReadCsv ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TextFormat\bin\Debug\net8.0\file.csv' because it is being used by another process.
+метод WriteCsv ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TextFormat\bin\Debug\net8.0\file.csv' because it is being used by another process.
+неверный формат файла
+неверный формат файла
+неверный формат файла
+неверный формат файла
+метод ReadCsv ошибка: файл не найден
+неверный формат файла
+неверный формат файла

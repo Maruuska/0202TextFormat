@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfModelFilm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ModelFilm>
+    <id>1</id>
+    <name>Звездные войны</name>
+    <genre>Фантастика</genre>
+    <year>1980</year>
+    <rating>8.7</rating>
+  </ModelFilm>
+  <ModelFilm>
+    <id>2</id>
+    <name>Побег из Шоушенка</name>
+    <genre>Драма</genre>
+    <year>1994</year>
+    <rating>9.3</rating>
+  </ModelFilm>
+  <ModelFilm>
+    <id>3</id>
+    <name>Титаник</name>
+    <genre>Драма</genre>
+    <year>1997</year>
+    <rating>7.8</rating>
+  </ModelFilm>
+  <ModelFilm>
+    <id>4</id>
+    <name>Храброе сердце</name>
+    <genre>Исторический</genre>
+    <year>1995</year>
+    <rating>8.3</rating>
+  </ModelFilm>
+  <ModelFilm>
+    <id>5</id>
+    <name>Леон</name>
+    <genre>Боевик</genre>
+    <year>1994</year>
+    <rating>8.5</rating>
+  </ModelFilm>
+  <ModelFilm>
+    <id>6</id>
+    <name>Матрица</name>
+    <genre>Фантастика</genre>
+    <year>1999</year>
+    <rating>8.7</rating>
+  </ModelFilm>
+  <ModelFilm>
+    <id>7</id>
+    <name>Интерстеллар</name>
+    <genre>Фантастика</genre>
+    <year>2014</year>
+    <rating>8.6</rating>
+  </ModelFilm>
+  <ModelFilm>
+    <id>8</id>
+    <name>Гладиатор</name>
+    <genre>Исторический</genre>
+    <year>2000</year>
+    <rating>8.5</rating>
+  </ModelFilm>
+</ArrayOfModelFilm>

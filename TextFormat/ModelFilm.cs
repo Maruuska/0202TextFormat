@@ -19,7 +19,7 @@ namespace TextFormat
             this.year = year;
             this.rating = rating;
         }
-        //конструктор для записи в .xml
+        //конструктор без аргументов для записи в .xml
         public ModelFilm() { }
 
         //переопределение функции ToString 
