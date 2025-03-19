@@ -1,0 +1,3 @@
+метод ReadCsv ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TestsMetods\bin\Debug\net8.0\test.csv' because it is being used by another process.
+метод WriteXml ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TestsMetods\bin\Debug\net8.0\test.xml' because it is being used by another process.
+метод ReadYaml ошибка: Exception during deserialization

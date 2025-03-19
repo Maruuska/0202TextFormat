@@ -1,1 +1,0 @@
-метод ReadCsv ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TextFormat\bin\Debug\net8.0\file.csv' because it is being used by another process.

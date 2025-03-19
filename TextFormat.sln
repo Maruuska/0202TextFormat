@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextFormat", "TextFormat\TextFormat.csproj", "{F719F63D-39FB-41DA-BA06-525CD160DDF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextFormat.Tests", "TestsMetods\TextFormat.Tests.csproj", "{4732E067-559A-412D-9477-45B5901BAA92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F719F63D-39FB-41DA-BA06-525CD160DDF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F719F63D-39FB-41DA-BA06-525CD160DDF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F719F63D-39FB-41DA-BA06-525CD160DDF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4732E067-559A-412D-9477-45B5901BAA92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4732E067-559A-412D-9477-45B5901BAA92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4732E067-559A-412D-9477-45B5901BAA92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4732E067-559A-412D-9477-45B5901BAA92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

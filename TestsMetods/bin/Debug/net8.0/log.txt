@@ -1,0 +1,43 @@
+метод ReadCsv ошибка: файл не найден
+метод ReadCsv ошибка: файл не найден
+метод ReadCsv ошибка: файл не найден
+метод ReadCsv ошибка: файл не найден
+неверный формат файла
+неверный формат файла
+неверный формат файла
+метод WriteFile неверный формат файла
+метод ReadYaml ошибка: Exception during deserialization
+метод ReadYaml ошибка: Exception during deserialization
+метод ReadYaml ошибка: Exception during deserialization
+метод ReadYaml ошибка: Exception during deserialization
+метод ReadYaml ошибка: Exception during deserialization
+неверный формат файла
+метод WriteFile неверный формат файла
+метод ReadCsv ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TestsMetods\bin\Debug\net8.0\test.csv' because it is being used by another process.
+метод WriteXml ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TestsMetods\bin\Debug\net8.0\test.xml' because it is being used by another process.
+метод ReadYaml ошибка: Exception during deserialization
+метод WriteFile неверный формат файла
+неверный формат файла
+метод ReadCsv ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TestsMetods\bin\Debug\net8.0\test.csv' because it is being used by another process.
+метод WriteXml ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TestsMetods\bin\Debug\net8.0\test.xml' because it is being used by another process.
+метод ReadYaml ошибка: Exception during deserialization
+метод WriteFile неверный формат файла
+неверный формат файла
+метод WriteCsv ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TestsMetods\bin\Debug\net8.0\test.csv' because it is being used by another process.
+метод WriteXml ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TestsMetods\bin\Debug\net8.0\test.xml' because it is being used by another process.
+метод ReadYaml ошибка: Exception during deserialization
+метод ReadYaml ошибка: Exception during deserialization
+метод ReadYaml ошибка: Exception during deserialization
+метод WriteFile неверный формат файла
+неверный формат файла
+метод ReadCsv ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TestsMetods\bin\Debug\net8.0\test.csv' because it is being used by another process.
+метод ReadXml ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TestsMetods\bin\Debug\net8.0\test.xml' because it is being used by another process.
+метод ReadYaml ошибка: Exception during deserialization
+неверный формат файла
+метод WriteFile неверный формат файла
+метод ReadCsv ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TestsMetods\bin\Debug\net8.0\test.csv' because it is being used by another process.
+метод ReadXml ошибка: The process cannot access the file 'C:\Users\Юзер\Desktop\TextFormat\TestsMetods\bin\Debug\net8.0\test.xml' because it is being used by another process.
+метод ReadYaml ошибка: Exception during deserialization
+метод ReadYaml ошибка: Exception during deserialization
+метод WriteFile неверный формат файла
+неверный формат файла
